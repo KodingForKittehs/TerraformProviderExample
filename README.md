@@ -9,18 +9,20 @@ Why write a Terraform provider?
 * Might have to write one someday.
 
 Assumptions:
-* Using vscode, docker
+* Using vscode, docker, Go 1.13
   * Install the 'Hashicorp Terraform' extension.
 * Some coding language, like Python, but zero knowledge of Go.
 * Some Linux, Bash, Containers and GitHUb Actions knowledge.
 
 Approach
 * Top-down - attempt to do someting assuming it exists, if it does not exist, create it.
+* Using docker for Terraform to keep things a bit more reproducible.
 
 ## Learning Go
 Since Terraform providers are written in Go, we need to learn a few things about Go.
 
 ## Running Things
+* Everything happens from `run.sh`
 
 ## Terrafom CLI Configuratoin
 * The `TF_LOG` environment variable can be set to debug issues.
