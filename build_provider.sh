@@ -6,4 +6,5 @@ go fmt
 go mod tidy
 go build -o terraform-provider-example
 cd ..
-cp provider/terraform-provider-example plugins
+mkdir -p plugins/terraform-example.com/exampleprovider/example/1.0.0/linux_amd64
+cp provider/terraform-provider-example plugins/terraform-example.com/exampleprovider/example/1.0.0/linux_amd64

@@ -1,6 +1,4 @@
 #!/bin/bash
 
-cd provider
-go mod init example.com/provider
-cd ..
+./build_provider.sh
 ./terraform_docker.sh init

@@ -66,3 +66,4 @@ Since Terraform providers are written in Go, we need to learn a few things about
 * https://hub.docker.com/r/hashicorp/terraform/
 * https://www.terraform.io/cli/config/config-file
 * https://www.terraform.io/internals/debugging
+* https://www.infracloud.io/blogs/developing-terraform-custom-provider/
