@@ -1,5 +1,5 @@
-#provider "provider-example" {
-#}
-
 provider "aws" {
+}
+
+provider "testola" {
 }
