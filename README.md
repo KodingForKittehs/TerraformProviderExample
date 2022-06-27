@@ -10,8 +10,7 @@ Why write a Terraform provider?
 
 Assumptions:
 * Using vscode, docker, Go 1.13
-  * Install the 'Hashicorp Terraform' extension.
-* Some coding language, like Python, but zero knowledge of Go.
+* Some coding experience, like Python, but zero knowledge of Go.
 * Some Linux, Bash, Containers and GitHUb Actions knowledge.
 
 Approach
