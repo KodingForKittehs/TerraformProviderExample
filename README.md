@@ -12,13 +12,12 @@ Assumptions:
 * Using vscode, docker, Go 1.13
 * Some coding experience, like Python, but zero knowledge of Go.
 * Some Linux, Bash, Containers and GitHUb Actions knowledge.
-
-Approach
-* Top-down - attempt to do someting assuming it exists, if it does not exist, create it.
-* Using docker for Terraform to keep things a bit more reproducible.
+* Using docker for Terraform to keep things a bit more reproducible and have a clean starting point.
 
 ## Learning Go
 Since Terraform providers are written in Go, we need to learn a few things about Go.
+* Know about `go mod` and `go fmt`.
+* Go uses tabs and not spaces.
 
 ## Running Things
 * Everything happens from `run.sh`
