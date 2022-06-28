@@ -2,13 +2,13 @@
 
 Some home-grown stuff on writing a Terraform provider.  
 
-Why write a Terraform provider?
+## Why write a Terraform provider?
 * Understand the inner workings of Terraform and IaC tools in general.
 * Another reason to learn Go.
 * Write better APIs.
 * Might have to write one someday.
 
-Assumptions:
+## Assumptions:
 * Using vscode, docker, Go 1.13
 * Some coding experience, like Python, but zero knowledge of Go.
 * Some Linux, Bash, Containers and GitHUb Actions knowledge.
@@ -22,6 +22,7 @@ Since Terraform providers are written in Go, we need to learn a few things about
 ## Running Things
 * Everything happens from `run.sh`
 
+# Some Notes and Observations
 ## Terrafom CLI Configuratoin
 * The `TF_LOG` environment variable can be set to debug issues.
   * `TF_LOG_CORE` and `TF_LOG_PROVIDER` can also be set.
@@ -45,8 +46,12 @@ Since Terraform providers are written in Go, we need to learn a few things about
   2022-06-27T18:42:31.528Z [ERROR] Checkpoint error: mkdir /.terraform.d: permission denied
   ```
 
-## Troubleshooting
-* The provider can't be found
+## Terraform `required_providers`
+
+## Terraform `provider`
+
+# Troubleshooting
+## The provider can't be found
   ```Initializing the backend...
 
   Initializing provider plugins...
@@ -59,6 +64,18 @@ Since Terraform providers are written in Go, we need to learn a few things about
   │ All modules should specify their required_providers so that external consumers will get the correct providers when using a module. To see which modules are currently depending on hashicorp/provider-example, run the following command:
   │     terraform providers
   ```
+  * Add logging with `TF_LOG`, check to see where providers are being loaded from.
+
+## Error: Failed to load plugin schemas
+* `terraform init` worked, but `terraform apply` fails with this error:
+```
+╷
+│ Error: Failed to load plugin schemas
+│ 
+│ Error while loading schemas for plugin components: Failed to obtain provider schema: Could not load the schema for provider terraform-example.com/exampleprovider/example: failed to instantiate provider "terraform-example.com/exampleprovider/example"
+│ to obtain schema: fork/exec .terraform/providers/terraform-example.com/exampleprovider/example/1.0.0/linux_amd64/terraform-provider-example: no such file or directory..
+╵
+```
 
 ## Docs and Links
 * https://www.hashicorp.com/resources/creating-terraform-provider-for-anything
